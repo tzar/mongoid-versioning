@@ -1,5 +1,4 @@
-$: << File.expand_path('../lib', __FILE__)
-require 'mongoid/versioning/version'
+require File.expand_path('../lib/mongoid/versioning/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.name          = 'mongoid-versioning'
@@ -11,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.description   = "Mongoid supports simple versioning through inclusion of the Mongoid::Versioning module."
 
   gem.files         = `git ls-files`.split("\n")
-  gem.require_path  = 'lib'
+  gem.require_path  = ['lib']
 
   gem.add_dependency 'activesupport'
   gem.add_dependency 'mongoid', '>= 4.0.0.beta1'
